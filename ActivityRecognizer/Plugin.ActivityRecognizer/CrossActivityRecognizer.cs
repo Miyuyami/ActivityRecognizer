@@ -29,7 +29,7 @@ namespace Plugin.ActivityRecognizer
 
         private static IActivityRecognizer CreateActivityRecognizer()
         {
-#if WINDOWS_UWP || __IOS__
+#if WINDOWS_UWP
             return null;
 #elif NETSTANDARD
             return null;

@@ -20,6 +20,8 @@ namespace Plugin.ActivityRecognizer
     {
         private readonly GoogleApiClient _Client;
 
+        public bool IsSupported => GoogleApiAvailability.Instance.IsGooglePlayServicesAvailable(Application.Context) == ConnectionResult.Success;
+
         public Status Status { get; } = Status.Disconnected;
 
         public ActivityRecognizerImplementation()

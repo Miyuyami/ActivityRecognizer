@@ -7,6 +7,8 @@ namespace Plugin.ActivityRecognizer
     /// </summary>
     public interface IActivityRecognizer
     {
+        bool IsSupported { get; }
+
         /// <summary>
         /// Monitor for all motions received from the device.
         /// </summary>

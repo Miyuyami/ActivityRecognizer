@@ -19,7 +19,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\iPhone\Debug</OutputPath>
-    <DefineConstants>DEBUG</DefineConstants>
+    <DefineConstants>DEBUG;__UNIFIED__;__MOBILE__;__IOS__;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
@@ -41,12 +41,21 @@
       <Link>CrossActivityRecognizer.cs</Link>
     </Compile>
     <Compile Include="ActivityRecognizerImplementation.cs" />
+    <Compile Include="Extensions\AbstractionExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\MiscUtils\MiscUtils\MiscUtils.csproj">
+      <Project>{90d6a838-8082-4e4f-9de1-50858c8e1cdf}</Project>
+      <Name>MiscUtils</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Plugin.ActivityRecognizer.Abstractions\Plugin.ActivityRecognizer.Abstractions.csproj">
       <Project>{6edb0588-ffc5-4ef5-8a99-9e241d0f878d}</Project>
       <Name>Plugin.ActivityRecognizer.Abstractions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Plugin.ActivityRecognizer\Plugin.ActivityRecognizer.csproj">
+      <Project>{221b2720-7c9e-49c4-9048-3ccb194ba23a}</Project>
+      <Name>Plugin.ActivityRecognizer</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
