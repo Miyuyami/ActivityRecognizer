@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace Plugin.ActivityRecognizer
 {
-    public class DetectedMotion : IEquatable<DetectedMotion>
+    [DebuggerDisplay("DebuggerDisplay,nq")]
+    public class DetectedMotion : IEquatable<DetectedMotion>, IComparable<DetectedMotion>
     {
         public int Confidence { get; }
         public MotionType Type { get; }
@@ -12,6 +14,11 @@ namespace Plugin.ActivityRecognizer
         {
             this.Confidence = confidence;
             this.Type = type;
+        }
+
+        public int CompareTo(DetectedMotion other)
+        {
+            return this.Confidence.CompareTo(other.Confidence);
         }
 
         public override bool Equals(object obj)
@@ -39,6 +46,11 @@ namespace Plugin.ActivityRecognizer
             }
         }
 
+        public override string ToString()
+        {
+            return $"{this.Type} with {this.Confidence}% confidence.";
+        }
+
         public static bool operator ==(DetectedMotion motion1, DetectedMotion motion2)
         {
             return EqualityComparer<DetectedMotion>.Default.Equals(motion1, motion2);
@@ -48,5 +60,8 @@ namespace Plugin.ActivityRecognizer
         {
             return !(motion1 == motion2);
         }
+
+        private string DebuggerDisplay
+            => $"{this.Type} - {this.Confidence}%";
     }
 }

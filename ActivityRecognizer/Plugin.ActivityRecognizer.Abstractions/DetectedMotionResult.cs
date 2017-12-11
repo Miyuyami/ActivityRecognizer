@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 
 namespace Plugin.ActivityRecognizer
 {
+    [DebuggerDisplay("DebuggerDisplay,nq")]
     public class DetectedMotionResult : IEquatable<DetectedMotionResult>
     {
         public DateTime Timestamp { get; }
@@ -44,6 +46,11 @@ namespace Plugin.ActivityRecognizer
             }
         }
 
+        public override string ToString()
+        {
+            return $"[{this.Timestamp}] Most probable motion: {this.MostProbableMotion}";
+        }
+
         public static bool operator ==(DetectedMotionResult result1, DetectedMotionResult result2)
         {
             return EqualityComparer<DetectedMotionResult>.Default.Equals(result1, result2);
@@ -53,5 +60,8 @@ namespace Plugin.ActivityRecognizer
         {
             return !(result1 == result2);
         }
+
+        private string DebuggerDisplay
+            => $"DetectedMotions={this.DetectedMotions.Count}";
     }
 }
