@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Plugin.ActivityRecognizer
 {
-    [DebuggerDisplay("DebuggerDisplay,nq")]
+    [DebuggerDisplay("{DebuggerDisplay,nq}")]
     public class DetectedMotionResult : IEquatable<DetectedMotionResult>
     {
         public DateTime Timestamp { get; }

@@ -4,7 +4,7 @@ using System.Diagnostics;
 
 namespace Plugin.ActivityRecognizer
 {
-    [DebuggerDisplay("DebuggerDisplay,nq")]
+    [DebuggerDisplay("{DebuggerDisplay,nq}")]
     public class DetectedMotion : IEquatable<DetectedMotion>, IComparable<DetectedMotion>
     {
         public int Confidence { get; }
