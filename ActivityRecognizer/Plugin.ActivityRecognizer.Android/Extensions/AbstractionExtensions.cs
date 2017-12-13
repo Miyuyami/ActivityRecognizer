@@ -1,4 +1,5 @@
 ﻿using Android.Gms.Location;
+using System;
 
 namespace Plugin.ActivityRecognizer
 {
@@ -26,6 +27,12 @@ namespace Plugin.ActivityRecognizer
                 case DetectedActivity.Unknown:
                     return MotionType.Unknown;
             }
+        }
+
+        private static readonly DateTime ReferenceDate = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+        public static DateTime GetDateTime(this ActivityRecognitionResult result)
+        {
+            return ReferenceDate.AddMilliseconds(result.Time);
         }
     }
 }

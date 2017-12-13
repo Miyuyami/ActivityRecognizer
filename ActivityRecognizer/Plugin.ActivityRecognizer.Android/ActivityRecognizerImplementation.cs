@@ -89,7 +89,7 @@ namespace Plugin.ActivityRecognizer
                                          DetectedMotion[] motions = activityResult.ProbableActivities.Select(da => new DetectedMotion(da.Confidence, da.GetMotionType()))
                                                                                                      .ToArray();
 
-                                         ob.OnNext(new DetectedMotionResult(new DateTime(activityResult.Time, DateTimeKind.Utc), mostProbableMotion, motions));
+                                         ob.OnNext(new DetectedMotionResult(activityResult.GetDateTime(), mostProbableMotion, motions));
                                      });
 
                 var intent = new Intent(Application.Context, typeof(DetectedActivitiesIntentService));
