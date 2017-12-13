@@ -5,7 +5,6 @@ using Android.Gms.Common.Apis;
 using Android.Gms.Location;
 using Android.OS;
 using Android.Support.V4.Content;
-using MiscUtils.Logging;
 using System;
 using System.Linq;
 using System.Reactive.Linq;
@@ -40,13 +39,11 @@ namespace Plugin.ActivityRecognizer
 
         private void OnConnected(Bundle connectionHint)
         {
-            DebugLogger.Write($"Connected: {connectionHint}.");
             this.StatusChangedObservable.OnNext(Status.Connected);
         }
 
         private void OnConnectionSuspended(int cause)
         {
-            DebugLogger.Write($"Connection suspended: {cause}.");
             if (GoogleApiClient.ConnectionCallbacks.CauseServiceDisconnected == cause)
             {
                 this.StatusChangedObservable.OnNext(Status.Disconnected);
@@ -59,7 +56,6 @@ namespace Plugin.ActivityRecognizer
 
         private void OnConnectionFailed(ConnectionResult result)
         {
-            DebugLogger.Write($"Connection failed: {result}.");
             this.StatusChangedObservable.OnNext(Status.Error);
             this._Client.Connect();
             //this.StatusChangedObservable.OnError(new Exception(result.ErrorMessage));

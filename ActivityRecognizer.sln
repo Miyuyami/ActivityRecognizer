@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2010
+VisualStudioVersion = 15.0.27130.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plugin.ActivityRecognizer", "ActivityRecognizer\Plugin.ActivityRecognizer\Plugin.ActivityRecognizer.csproj", "{A6FCEF44-D2BA-42C7-B3CB-13667BCD7B54}"
 EndProject
@@ -12,8 +12,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.ActivityRecognizer.Android", "ActivityRecognizer\Plugin.ActivityRecognizer.Android\Plugin.ActivityRecognizer.Android.csproj", "{56A56F17-7DE1-4CA1-9617-BF32E971AC84}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.ActivityRecognizer.UWP", "ActivityRecognizer\Plugin.ActivityRecognizer.UWP\Plugin.ActivityRecognizer.UWP.csproj", "{E34B516D-C0D8-450F-9DB0-BB6A5B04AEF1}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiscUtils", "..\MiscUtils\MiscUtils\MiscUtils.csproj", "{90D6A838-8082-4E4F-9DE1-50858C8E1CDF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{909A6EFE-9BA4-4684-85D2-4877FD633B48}"
 	ProjectSection(SolutionItems) = preProject
@@ -112,22 +110,6 @@ Global
 		{E34B516D-C0D8-450F-9DB0-BB6A5B04AEF1}.Release|x64.Build.0 = Release|x64
 		{E34B516D-C0D8-450F-9DB0-BB6A5B04AEF1}.Release|x86.ActiveCfg = Release|x86
 		{E34B516D-C0D8-450F-9DB0-BB6A5B04AEF1}.Release|x86.Build.0 = Release|x86
-		{90D6A838-8082-4E4F-9DE1-50858C8E1CDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{90D6A838-8082-4E4F-9DE1-50858C8E1CDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{90D6A838-8082-4E4F-9DE1-50858C8E1CDF}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{90D6A838-8082-4E4F-9DE1-50858C8E1CDF}.Debug|ARM.Build.0 = Debug|Any CPU
-		{90D6A838-8082-4E4F-9DE1-50858C8E1CDF}.Debug|x64.ActiveCfg = Debug|x64
-		{90D6A838-8082-4E4F-9DE1-50858C8E1CDF}.Debug|x64.Build.0 = Debug|x64
-		{90D6A838-8082-4E4F-9DE1-50858C8E1CDF}.Debug|x86.ActiveCfg = Debug|x86
-		{90D6A838-8082-4E4F-9DE1-50858C8E1CDF}.Debug|x86.Build.0 = Debug|x86
-		{90D6A838-8082-4E4F-9DE1-50858C8E1CDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{90D6A838-8082-4E4F-9DE1-50858C8E1CDF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{90D6A838-8082-4E4F-9DE1-50858C8E1CDF}.Release|ARM.ActiveCfg = Release|Any CPU
-		{90D6A838-8082-4E4F-9DE1-50858C8E1CDF}.Release|ARM.Build.0 = Release|Any CPU
-		{90D6A838-8082-4E4F-9DE1-50858C8E1CDF}.Release|x64.ActiveCfg = Release|x64
-		{90D6A838-8082-4E4F-9DE1-50858C8E1CDF}.Release|x64.Build.0 = Release|x64
-		{90D6A838-8082-4E4F-9DE1-50858C8E1CDF}.Release|x86.ActiveCfg = Release|x86
-		{90D6A838-8082-4E4F-9DE1-50858C8E1CDF}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

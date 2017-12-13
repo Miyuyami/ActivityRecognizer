@@ -126,10 +126,6 @@
     <None Include="Resources\AboutResources.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\MiscUtils\MiscUtils\MiscUtils.csproj">
-      <Project>{90d6a838-8082-4e4f-9de1-50858c8e1cdf}</Project>
-      <Name>MiscUtils</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Plugin.ActivityRecognizer.Abstractions\Plugin.ActivityRecognizer.Abstractions.csproj">
       <Project>{6edb0588-ffc5-4ef5-8a99-9e241d0f878d}</Project>
       <Name>Plugin.ActivityRecognizer.Abstractions</Name>
