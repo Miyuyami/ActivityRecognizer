@@ -75,7 +75,7 @@ namespace Plugin.ActivityRecognizer
             return this.MotionDetectedObservable;
         }
 
-        public IObservable<DetectedMotionResult> GetMotion()
+        public IObservable<DetectedMotionResult> GetLastMotion()
         {
             return this.MotionDetectedObservable
                        .Take(1);

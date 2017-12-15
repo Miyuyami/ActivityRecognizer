@@ -22,6 +22,6 @@ namespace Plugin.ActivityRecognizer
         /// Returns an <see cref="IObservable{T}"/> containing the last detected motion as <see cref="DetectedMotionResult"/>, if one has yet to be detected, the result will be sent when the motion is detected.
         /// </summary>
         /// <returns>An <see cref="IObservable{T}"/> containing the result, <see cref="DetectedMotionResult"/>.</returns>
-        IObservable<DetectedMotionResult> GetMotion();
+        IObservable<DetectedMotionResult> GetLastMotion();
     }
 }
