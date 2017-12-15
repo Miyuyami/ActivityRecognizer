@@ -4,6 +4,9 @@
     <RootNamespace>Plugin.ActivityRecognizer</RootNamespace>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard2.0\Plugin.ActivityRecognizer.Abstractions.xml</DocumentationFile>
+  </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="System.Reactive" Version="3.1.1" />
   </ItemGroup>
